@@ -1,0 +1,59 @@
+html,body{
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#card-container{
+    width: 300px;
+    height: 400px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card{
+    color: red;
+    height: 220px;
+    width: 350px;
+    background-color: green;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#recto{
+    background-color: rgb(1, 58, 1);
+    z-index: 1;
+    transform: rotate(20deg);
+}
+#verso{
+    transform: rotate(-10deg);
+}
+
+@media (max-width: 767px) {
+    .card{
+      height: 150px; 
+      width: 250px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .card{
+      height: 180px; /* Ajustez la hauteur selon vos préférences */
+      width: 280px; /* Utilisez une largeur en pourcentage pour qu'elle s'adapte à la largeur de l'écran */
+    }
+}
+
+#verso:hover{
+    z-index: 2;
+}
