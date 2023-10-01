@@ -35,18 +35,18 @@ body {
 
 }
 
-
 #recto{
     z-index: 1;
     display: grid;
-    grid-template-columns: 0.4fr auto;
+    grid-template-columns: 0.4fr 0.6fr;
     animation: moveUpDown 2s linear infinite; /* Applique l'animation en boucle */
     transform: rotate(20deg);
-
-
 }
+
 #verso{
     transform: rotate(-10deg);
+    display: grid;
+    grid-template-rows: 0.2fr auto;
 }
 
 @media (max-width: 767px) {
@@ -55,6 +55,7 @@ body {
       width: 250px;
     }
 }
+
 @media (min-width: 768px) and (max-width: 1023px) {
     .card{
       height: 180px; /* Ajustez la hauteur selon vos préférences */
@@ -63,11 +64,13 @@ body {
 }
 
 #verso:hover{
-    z-index: 2;
+    z-index: 1;
 }
 
-#recto *{
-    border: 1px solid black;
+#verso p{
+    font-family: 'Marcellus', serif;
+    letter-spacing: 5px;
+    font-weight: 800;
 }
 
 #photo{
@@ -75,30 +78,98 @@ body {
     place-self: center;
     text-align: center;
 }
-#photo h4{
+#recto h4{
     font-family: 'Marcellus', serif;
     letter-spacing: 2px;
     padding-top: 1em;
     font-size: 15px;
 }
+#recto p{
+    font-family: 'Marcellus', serif;
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
 #photo img{
     max-width: 100%;
     max-height: 100%;    
     border-radius: 10px;
 }
-#infos{
-    grid-column: 2;
 
+#skills{
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    max-height: 100%;
 }
 
 @keyframes moveUpDown {
     0% {
-      transform: translateY(0); /* Position de départ */
+      transform: translateY(0);
     }
     50% {
-      transform: translateY(20px); /* Position intermédiaire */
+      transform: translateY(30px);
     }
     100% {
-      transform: translateY(0); /* Retour à la position de départ */
+      transform: translateY(0); 
     }
+}
+
+#js{
+    background-image: url(./img/js.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding-right: 40px;
+    width: fit-content;
+}
+#css{
+    background-image: url(./img/kisspng-web-development-cascading-style-sheets-css3-comput-css-5ada20be146fc2.8807141415242446700837.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding-right: 40px;
+    width: fit-content;
+}
+#sql{
+    background-image: url(./img/4492311.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding-right: 40px;
+    width: fit-content;
+}
+#jv{
+    background-image: url(./img/téléchargement.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding-right: 40px;
+    width: fit-content;
+}
+#cpp{
+    background-image: url(./img/png-clipart-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding-right: 40px;
+    width: fit-content;
+}
+
+#links{
+    display: flex;
+    justify-content: space-around;
+}
+
+#links img{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
 }
